@@ -1,0 +1,45 @@
+.steps li a.questions1 {
+    float: left;
+    background: url(../a/images/step1.png) 0 0 no-repeat;
+    width: 193px;
+    height: 163px;
+}
+.steps li a.questions1:hover {
+    background: url(../a/images/step1_hover.png) 0 0 no-repeat;
+}
+.steps li a.exams {
+    float: left;
+    background: url(../a/images/step2.png) 0 0 no-repeat;
+    width: 196px;
+    height: 163px;
+}
+.steps li a.exams:hover {
+    background: url(../a/images/step2_hover.png) 0 0 no-repeat;
+}
+.steps li a.users {
+    float: left;
+    background: url(../a/images/step3.png) 0 0 no-repeat;
+    width: 193px;
+    height: 163px;
+}
+.steps li a.users:hover {
+    background: url(../a/images/step3_hover.png) 0 0 no-repeat;
+}
+.steps li a.certificates {
+    float: left;
+    background: url(../a/images/step4.png) 0 0 no-repeat;
+    width: 193px;
+    height: 163px;
+}
+.steps li a.certificates:hover {
+    background: url(../a/images/step4_hover.png) 0 0 no-repeat;
+}
+.steps li a.upgrade {
+    float: left;
+    background: url(../a/images/step5.png) 0 0 no-repeat;
+    width: 193px;
+    height: 163px;
+}
+.steps li a.upgrade:hover {
+    background: url(../a/images/step5_hover.png) 0 0 no-repeat;
+}

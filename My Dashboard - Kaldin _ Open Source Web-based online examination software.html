@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<!-- saved from url=(0034)http://www.kaldin.com/a/sitemap.do -->
+<html lang="en" class="win chrome chrome4 webkit webkit5"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<title>My Dashboard - Kaldin | Open Source Web-based online examination software</title>
+
+<link type="image/x-icon" href="http://www.kaldin.com/a/images/favicon.ico" rel="shortcut icon">
+<link href="./My Dashboard - Kaldin _ Open Source Web-based online examination software_files/style_blue.css" rel="stylesheet" type="text/css">
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="./My Dashboard - Kaldin _ Open Source Web-based online examination software_files/feedback.css" type="text/css" media="screen">
+<script type="text/javascript" src="./My Dashboard - Kaldin _ Open Source Web-based online examination software_files/jquery-1.7.2.js"></script>
+<script type="text/javascript" src="./My Dashboard - Kaldin _ Open Source Web-based online examination software_files/ui.core.js"></script>
+<script type="text/javascript" src="./My Dashboard - Kaldin _ Open Source Web-based online examination software_files/ui.draggable.js"></script>
+<script type="text/javascript" src="./My Dashboard - Kaldin _ Open Source Web-based online examination software_files/ui.resizable.js"></script>
+<script type="text/javascript" src="./My Dashboard - Kaldin _ Open Source Web-based online examination software_files/jquery-ui.js"></script>
+<script type="text/javascript" src="./My Dashboard - Kaldin _ Open Source Web-based online examination software_files/ui.datepicker.js"></script>
+<script type="text/javascript" src="./My Dashboard - Kaldin _ Open Source Web-based online examination software_files/tabber.js"></script>
+<script type="text/javascript" src="./My Dashboard - Kaldin _ Open Source Web-based online examination software_files/jquery.dataTables.js"></script>
+
+<script type="text/javascript" src="./My Dashboard - Kaldin _ Open Source Web-based online examination software_files/feedback.js"></script>
+<script type="text/javascript" src="./My Dashboard - Kaldin _ Open Source Web-based online examination software_files/jquery.browser.min.js"></script>
+<!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->         
+<script type="text/javascript">
+function cancel(){
+	$("#dialog").dialog('close');
+}
+function showContactusDialog(){
+	$("#dialog").dialog();
+}
+function sendContactusMessage() {
+	var message = document.getElementById("cprmsg").value;
+	if(message ==""){
+		alert("Please enter the message.");
+	 	return;
+	 }else{
+		$.post("sendpcrequest.do?check", {
+			msg : message,
+			pid : "-1",
+			opr : "req"
+		}, function(data) {
+			if (data == null) {
+				message(container, "Error while sending request...");
+			} else {			
+				if(data == 'success'){
+					alert("Your request has been send successfully.");
+					$("#dialog").dialog('close');
+				}
+			}
+		});
+	 }
+}
+</script>
+<style>.dash_small { width: 35%; float: left; position: relative; margin-left: 130px; border:none;}</style>
+</head>
+<body>
+	
+	<div id="wrapper">
+		
+<div id="header">
+    <h1><a href="#"><img src="./My Dashboard - Kaldin _ Open Source Web-based online examination software_files/logo-blue.png" alt="kaldin"></a></h1>
+  	
+    
+        
+    
+  
+      
+        
+      
+      
+  <!-- top nav end -->
+  <ul id="topnav">
+  <li><a href="My Profile - Kaldin Online Exam to Evaluate Knowledge.html" id="settingsId">jayaram</a></li>
+  <li><a href="Upgrade your Plan.html" id="upgradeId">Upgrade</a></li>
+      <li><a href="index.html" title="Logout">Logout</a></li>
+    </ul>
+    <!-- topnav end -->
+    
+  <ul id="nav">
+      <li class="active"><a href="My Dashboard - Kaldin _ Open Source Web-based online examination software.html" id="homeId">Dashboard</a></li>
+      <li><a href="Question List - Kaldin _ Open Source Web-based online examination software.html" id="questionBankId">Questions</a></li>
+      <li><a href="Question Papers - Kaldin Online Exam to Evaluate Knowledge.html" id="testId">Exams</a></li>
+      <li><a href="Groups - Kaldin Online Exam to Evaluate Knowledge.html" id="usersId">Users</a></li>
+      
+      <li><a href="Certificate Templates - Kaldin The Knowledge Evaluator.html" id="certId">Certificates</a></li>
+      
+      <li><a href="Email Templates - Kaldin The Knowledge Evaluator.html" id="usersId">Settings  </a></li>
+      <li><a href="Exam Results - Kaldin Online Exam to Evaluate Knowledge.html" id="reportsId">Results</a></li>
+	  <li><a href="#" id="usersId">View Pending Requests  </a></li>
+      </ul>
+  <!-- nav end -->
+  
+</div>
+  <!-- header end -->
+		<div id="content">
+			<div id="middle_section">
+				<h3>My Dashboard</h3>
+				<hr>
+				<div class="box_outer">
+					<ul class="steps">
+						<li><a href="#" class="questions1">
+							
+							<div class="questimg"></div>
+							</a>
+							<p><a href="#">Add</a>&nbsp;/&nbsp;
+								<a href="#">Import</a>
+								Questions,
+								<a href="#">Categories</a>,
+								<a href="#">Subcategories</a>,
+								<a href="#">Complexity</a>
+							</p></li>
+						<li><a href="#" class="exams">
+						
+							<div class="examsimg"></div></a>
+							<p> Add 
+								<a href="#">Question papers</a> and 
+								<a href="#">schedule exam</a>
+							</p></li>
+						<li><a href="#" class="users">
+						
+							<div class="usersimg"></div></a>
+							<p>
+								<a href="#">Add</a>&nbsp;/&nbsp;
+								<a href="#">Import</a>&nbsp;users&nbsp;by
+								<a href="#">group</a>
+							</p></li>
+						<li><a href="#" class="certificates">
+						
+							<div class="certiimg"></div></a>
+							<p><a href="#">Add / Manage your certificates</a></p>
+							</li>
+						<li><a href="#" class="upgrade">
+
+							<div class="upgradeimg"></div><div class="fcredit">
+							Available Free Credits: 50
+							
+							</div></a>
+							<p><a href="#">Upgrade and remove your limits</a></p>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="clr"></div>
+			
+				
+				
+			 <br>
+			 <div id="dialog" title="Customize Plan Request" style="display: none;">
+					<p><label>Customize Plan Message:</label><textarea rows="5" cols="60" name="message" id="cprmsg"></textarea></p>
+					<p style="text-align: right;">
+							<input type="button" onclick="cancel();" value="Cancel" class="btn_green">&nbsp;
+							<input type="button" onclick="sendContactusMessage();" value="Change Plan" class="btn_green">
+					</p>
+			</div>	
+				
+			
+			
+			<table>
+				<tbody><tr>
+					<td width="20%" style="border:0px;height:300px;">
+						<iframe frameborder="0" src="./My Dashboard - Kaldin _ Open Source Web-based online examination software_files/tracknalert.html" style="border:0;height:300px;"></iframe>
+					</td>
+					<td width="*%" style="border:0px;padding: 5px;text-align: left;!important;">
+						<table class="dash_half" style="width:100%;!important;">
+							<thead>
+								<tr>
+									<th></th>
+									<th>Today</th>
+									<th>This Week</th>
+									<th>This Month</th>
+									<th>Till Date</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr class="odd">
+									<td>Total Exams Created</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>1</td>
+								</tr>
+								<tr class="even">
+									<td>Total Candidates Scheduled for Exam</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>1</td>
+								</tr>
+								<tr class="odd">
+									<td>Total Candidates Given the Exam</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+								</tr>
+								<tr class="even">
+									<td>Total Candidates Passed the Exam</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+								</tr>
+							</tbody>
+						</table>
+					</td>
+					<td width="20%" style="border:0px;">&nbsp;</td>
+				</tr>
+			</tbody></table>
+		</div>
+	</div>
+	
+
+
+</body></html>

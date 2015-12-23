@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<!-- saved from url=(0034)http://www.kaldin.com/a/upgrade.do -->
+<html lang="en" class="win chrome chrome4 webkit webkit5"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<title>Upgrade your Plan </title>
+<link type="image/x-icon" href="http://www.kaldin.com/a/images/favicon.ico" rel="shortcut icon">
+<link href="./Upgrade your Plan_files/style_blue.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="./Upgrade your Plan_files/feedback.css" type="text/css" media="screen">
+<script type="text/javascript" src="./Upgrade your Plan_files/jquery-1.7.2.js"></script>
+<script type="text/javascript" src="./Upgrade your Plan_files/ui.core.js"></script>
+<script type="text/javascript" src="./Upgrade your Plan_files/ui.draggable.js"></script>
+<script type="text/javascript" src="./Upgrade your Plan_files/ui.resizable.js"></script>
+<script type="text/javascript" src="./Upgrade your Plan_files/jquery-ui.js"></script>
+<script type="text/javascript" src="./Upgrade your Plan_files/ui.datepicker.js"></script>
+<script type="text/javascript" src="./Upgrade your Plan_files/tabber.js"></script>
+<script type="text/javascript" src="./Upgrade your Plan_files/jquery.dataTables.js"></script>
+
+<script type="text/javascript" src="./Upgrade your Plan_files/feedback.js"></script>
+<script type="text/javascript" src="./Upgrade your Plan_files/jquery.browser.min.js"></script>
+<!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->         
+<script type="text/javascript">
+function cancel(){
+	$("#dialog").dialog('close');
+}
+function showContactusDialog(){
+	$("#dialog").dialog();
+}
+function sendContactusMessage() {
+	var message = document.getElementById("cprmsg").value;
+	if(message ==""){
+		alert("Please enter the message.");
+	 	return;
+	 }else{
+		$.post("sendpcrequest.do?check", {
+			msg : message,
+			pid : "-1",
+			opr : "req"
+		}, function(data) {
+			if (data == null) {
+				message(container, "Error while sending request...");
+			} else {			
+				if(data == 'success'){
+					alert("Your request has been send successfully.");
+					$("#dialog").dialog('close');
+				}
+			}
+		});
+	 }
+}
+function planselection(selectedPlan){
+	document.getElementById("sp").value = ""+ selectedPlan;
+	document.forms["pselection"].submit();
+}
+</script>
+<style>
+.ptitle { border-bottom: 1px solid black;padding-top: 10px; background-color: lightsalmon;}
+.leftsideplan {text-align:center;float: left;width: 99%; border: 1px solid;}
+.leftsideplan .rowcolor { background-color: lightcyan; }
+.rightsideplan {text-align:center;width: 99%;float: right;border: 1px solid;}
+.rightsideplan .rowcolor { background-color: lightcyan; }
+.paymentplan { padding: 13px; width:95%; float: left;border-bottom: 1px solid black;}
+.col1{float: left; width: 11%;border: 1px dashed;padding: 10px; margin-top: 15px;}
+.col2{float: left; width: 50%;}
+.col3{float: left; width: 14%;}
+.col4{float: right; width: 20%; margin-top: 20px;}
+</style>
+</head>
+<body>
+
+	<div id="wrapper">
+		
+<div id="header">
+    <h1><a href="#"><img src="./Upgrade your Plan_files/logo-blue.png" alt="kaldin"></a></h1>
+  	
+    
+        
+    
+  
+      
+        
+      
+      
+  <!-- top nav end -->
+  <ul id="topnav">
+  <li><a href="My Profile - Kaldin Online Exam to Evaluate Knowledge.html" id="settingsId">jayaram</a></li>
+  <li class="active"><a href="Upgrade your Plan.html" id="upgradeId">Upgrade</a></li>
+      <li><a href="index.html" title="Logout">Logout</a></li>
+    </ul>
+    <!-- topnav end -->
+    
+  <ul id="nav">
+      <li><a href="My Dashboard - Kaldin _ Open Source Web-based online examination software.html" id="homeId">Dashboard</a></li>
+      <li><a href="Question List - Kaldin _ Open Source Web-based online examination software.html" id="questionBankId">Questions</a></li>
+      <li><a href="Question Papers - Kaldin Online Exam to Evaluate Knowledge.html" id="testId">Exams</a></li>
+      <li><a href="Groups - Kaldin Online Exam to Evaluate Knowledge.html" id="usersId">Users</a></li>
+      
+      <li><a href="Certificate Templates - Kaldin The Knowledge Evaluator.html" id="certId">Certificates</a></li>
+      
+      <li><a href="Email Templates - Kaldin The Knowledge Evaluator.html" id="usersId">Settings  </a></li>
+      <li><a href="Exam Results - Kaldin Online Exam to Evaluate Knowledge.html" id="reportsId">Results</a></li>
+	  <li><a href="#" id="usersId">View Pending Requests  </a></li>
+      </ul>
+  <!-- nav end -->
+  
+</div>
+  <!-- header end -->
+		<div id="content">
+			<div id="sidebar">
+				<ul class="sidebar_nav">
+					</ul>
+				<div class="sidebar_note message note"><p>Pay as you go Plan</p></div>
+			</div>
+			<div id="main">
+				<h3>Pay as you go Plan</h3>
+				<hr>
+				<div id="dialog" title="Customize Plan Request" style="display: none;">
+					<p><label>Customize Plan Message:</label><textarea rows="5" cols="31" name="message" id="cprmsg"></textarea></p>
+					<p style="text-align: right;">
+							<input type="button" onclick="cancel();" value="Cancel" class="btn_green">&nbsp;
+							<input type="button" onclick="sendContactusMessage();" value="Send Message" class="btn_green">
+					</p>
+				</div>
+				<div style="width:50%;">
+					<div class="leftsideplan">
+					<p class="ptitle"><b>For Mass or Periodic Online Exams</b></p>
+					<div class="paymentplan rowcolor">
+						<div class="col1"><b>P100</b></div>
+						<div class="col2"><b>100 Credits</b> <br> + <br> includes all features <br>(able to give 100 test across an year time)</div>
+						<div class="col3"><img src="./Upgrade your Plan_files/payicon.png"> <br> <b>49.00 USD</b></div>
+						<div class="col4"><a href="Upgrade your Plan_buy.html"><input type="button" value="Buy Now"  class="btn_green_sml" style="cursor: pointer;"></a> </div>
+					</div>
+					<div class="paymentplan">
+						<div class="col1"><b>P200</b></div>
+						<div class="col2"><b>200 Credits</b> <br> + <br> includes all features <br>(able to give 200 test across an year time)</div>
+						<div class="col3"><img src="./Upgrade your Plan_files/payicon.png"> <br> <b>99.00 USD</b></div>
+						<div class="col4"><input type="button" value="Buy Now" onclick="javascript:planselection(&#39;200&#39;);" class="btn_green_sml" style="cursor: pointer;"> </div>
+					</div>
+					<div class="paymentplan rowcolor">
+						<div class="col1"><b>P300</b></div>
+						<div class="col2"><b>300 Credits</b> <br> + <br> includes all features <br>(able to give 300 test across an year time)</div>
+						<div class="col3"><img src="./Upgrade your Plan_files/payicon.png"> <br> <b>139.00 USD</b></div>
+						<div class="col4"><input type="button" value="Buy Now" onclick="javascript:planselection(&#39;300&#39;);" class="btn_green_sml" style="cursor: pointer;"> </div>
+					</div>
+					<div class="paymentplan">
+						<div class="col1"><b>P400</b></div>
+						<div class="col2"><b>400 Credits</b> <br> + <br> includes all features <br>(able to give 400 test across an year time)</div>
+						<div class="col3"><img src="./Upgrade your Plan_files/payicon.png"> <br> <b>199.00 USD</b></div>
+						<div class="col4"><input type="button" value="Buy Now" onclick="javascript:planselection(&#39;400&#39;);" class="btn_green_sml" style="cursor: pointer;"> </div>
+					</div>
+					<div class="paymentplan rowcolor">
+						<div class="col1"><b>P500</b></div>
+						<div class="col2"><b>500 Credits</b> <br> + <br> includes all features <br>(able to give 500 test across an year time)</div>
+						<div class="col3"><img src="./Upgrade your Plan_files/payicon.png"> <br> <b>239.00 USD</b></div>
+						<div class="col4"><input type="button" value="Buy Now" onclick="javascript:planselection(&#39;500&#39;);" class="btn_green_sml" style="cursor: pointer;"> </div>
+					</div>
+					</div>
+				</div>
+				<div style="width:50%;float: left;">
+					<div class="rightsideplan">
+					<p class="ptitle"><b>For Regular Online Exams</b></p>
+					<div class="paymentplan">
+						<div class="col1"><b>P1000</b></div>
+						<div class="col2"><b>1000 Credits</b> <br> + <br> includes all features <br>(able to give 1000 test across an year time)</div>
+						<div class="col3"><img src="./Upgrade your Plan_files/payicon.png"> <br> <b>499.00 USD</b></div>
+						<div class="col4"><input type="button" value="Buy Now" onclick="javascript:planselection(&#39;1000&#39;);" class="btn_green_sml" style="cursor: pointer;"> </div>
+					</div>
+					<div class="paymentplan rowcolor">
+						<div class="col1"><b>P2000</b></div>
+						<div class="col2"><b>2000 Credits</b> <br> + <br> includes all features <br>(able to give 2000 test across an year time)</div>
+						<div class="col3"><img src="./Upgrade your Plan_files/payicon.png"> <br> <b>939.00 USD</b></div>
+						<div class="col4"><input type="button" value="Buy Now" onclick="javascript:planselection(&#39;2000&#39;);" class="btn_green_sml" style="cursor: pointer;"> </div>
+					</div>
+					<div class="paymentplan">
+						<div class="col1"><b>P5000</b></div>
+						<div class="col2"><b>5000 Credits</b> <br> + <br> includes all features <br>(able to give 5000 test across an year time)</div>
+						<div class="col3"><img src="./Upgrade your Plan_files/payicon.png"> <br> <b>2399.00 USD</b></div>
+						<div class="col4"><input type="button" value="Buy Now" onclick="javascript:planselection(&#39;5000&#39;);" class="btn_green_sml" style="cursor: pointer;"> </div>
+					</div>
+					<div class="paymentplan rowcolor">
+						<div class="col1"><b>P10000</b></div>
+						<div class="col2"><b>10000 Credits</b> <br> + <br> includes all features <br>(able to give 10000 test across an year time)</div>
+						<div class="col3"><img src="./Upgrade your Plan_files/payicon.png"> <br> <b>4539.00 USD</b></div>
+						<div class="col4"><input type="button" value="Buy Now" onclick="javascript:planselection(&#39;10000&#39;);" class="btn_green_sml" style="cursor: pointer;"> </div>
+					</div>
+					<div class="paymentplan">
+						<div class="col1"><b>P25000</b></div>
+						<div class="col2"><b>25000 Credits</b> <br> + <br> includes all features <br>(able to give 25000 test across an year time)</div>
+						<div class="col3"><img src="./Upgrade your Plan_files/payicon.png"> <br> <b>9999.00 USD</b></div>
+						<div class="col4"><input type="button" value="Buy Now" onclick="javascript:planselection(&#39;25000&#39;);" class="btn_green_sml" style="cursor: pointer;"> </div>
+					</div>
+					</div>
+				</div>
+				<div style="float: left;width:95%" class="message note"><p><a href="#">Contact us</a> for customized plan or to change your current exam limits</p><p>Unused credits will remain as-in till the validity ends, you can carry forward these credits by upgrading the plan before expiry time ends</p>
+				</div>
+				<div style="float: left;width: 100%;text-align: center;"><p><b>Upgrade instantly with</b></p><p><img src="./Upgrade your Plan_files/AM_mc_vs_dc_ae.jpg"></p></div>
+			</div>
+		</div>
+	</div>
+	<form action="http://www.kaldin.com/a/upgradeselected.do" name="pselection" method="post"><input type="hidden" name="sp" id="sp"></form>
+
+<!-- PAGE TIMING STATISTICS :  REQUEST TIMESTAMP | 2015-12-23_00.16.52 PROCESSING TIME | 1 ms  -->		
+
+</body></html>

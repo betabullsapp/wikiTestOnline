@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<!-- saved from url=(0042)http://www.kaldin.com/a/upgradeselected.do -->
+<html lang="en" class="win chrome chrome4 webkit webkit5"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<title>Upgrade your Plan </title>
+<link type="image/x-icon" href="http://www.kaldin.com/a/images/favicon.ico" rel="shortcut icon">
+<link href="./Upgrade your Plan_buy_files/style_blue.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="./Upgrade your Plan_buy_files/feedback.css" type="text/css" media="screen">
+<script type="text/javascript" src="./Upgrade your Plan_buy_files/jquery-1.7.2.js"></script>
+<script type="text/javascript" src="./Upgrade your Plan_buy_files/ui.core.js"></script>
+<script type="text/javascript" src="./Upgrade your Plan_buy_files/ui.draggable.js"></script>
+<script type="text/javascript" src="./Upgrade your Plan_buy_files/ui.resizable.js"></script>
+<script type="text/javascript" src="./Upgrade your Plan_buy_files/jquery-ui.js"></script>
+<script type="text/javascript" src="./Upgrade your Plan_buy_files/ui.datepicker.js"></script>
+<script type="text/javascript" src="./Upgrade your Plan_buy_files/tabber.js"></script>
+<script type="text/javascript" src="./Upgrade your Plan_buy_files/jquery.dataTables.js"></script>
+
+<script type="text/javascript" src="./Upgrade your Plan_buy_files/feedback.js"></script>
+<script type="text/javascript" src="./Upgrade your Plan_buy_files/jquery.browser.min.js"></script>
+<!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->         
+<script type="text/javascript">
+function cancel(){
+	$("#dialog").dialog('close');
+}
+function showContactusDialog(){
+	$("#dialog").dialog();
+}
+function sendContactusMessage() {
+	var message = document.getElementById("cprmsg").value;
+	if(message ==""){
+		alert("Please enter the message.");
+	 	return;
+	 }else{
+		$.post("sendpcrequest.do?check", {
+			msg : message,
+			pid : "-1",
+			opr : "req"
+		}, function(data) {
+			if (data == null) {
+				message(container, "Error while sending request...");
+			} else {			
+				if(data == 'success'){
+					alert("Your request has been send successfully.");
+					$("#dialog").dialog('close');
+				}
+			}
+		});
+	 }
+}
+</script>
+<style>
+.currentplan {float: left;margin-bottom: 10px;border: 1px solid black;width:97%;padding: 13px;}
+.paymentplan { padding: 13px; width:97%; float: left;border: 1px solid black; text-align:center;}
+.col1{float: left; width: 20%;border: 1px dashed;padding: 10px;}
+.col2{float: left; width: 57%;}
+.col3{float: left; width: 20%;}
+</style>
+</head>
+<body>
+
+	<div id="wrapper">
+		
+<div id="header">
+    <h1><a href="#"><img src="./Upgrade your Plan_buy_files/logo-blue.png" alt="kaldin"></a></h1>
+  	
+    
+        
+    
+  
+      
+        
+      
+      
+  <!-- top nav end -->
+  <ul id="topnav">
+  <li><a href="My Profile - Kaldin Online Exam to Evaluate Knowledge.html" id="settingsId">jayaram</a></li>
+  <li class="active"><a href="Upgrade your Plan.html" id="upgradeId">Upgrade</a></li>
+      <li><a href="index.html" title="Logout">Logout</a></li>
+    </ul>
+    <!-- topnav end -->
+    
+  <ul id="nav">
+      <li><a href="My Dashboard - Kaldin _ Open Source Web-based online examination software.html" id="homeId">Dashboard</a></li>
+      <li><a href="Question List - Kaldin _ Open Source Web-based online examination software.html" id="questionBankId">Questions</a></li>
+      <li><a href="Question Papers - Kaldin Online Exam to Evaluate Knowledge.html" id="testId">Exams</a></li>
+      <li><a href="Groups - Kaldin Online Exam to Evaluate Knowledge.html" id="usersId">Users</a></li>
+      
+      <li><a href="Certificate Templates - Kaldin The Knowledge Evaluator.html" id="certId">Certificates</a></li>
+      
+      <li><a href="Email Templates - Kaldin The Knowledge Evaluator.html" id="usersId">Settings  </a></li>
+      <li><a href="Exam Results - Kaldin Online Exam to Evaluate Knowledge.html" id="reportsId">Results</a></li>
+	  <li><a href="#" id="usersId">View Pending Requests  </a></li>
+      </ul>
+  <!-- nav end -->
+  
+</div>
+  <!-- header end -->
+		<div id="content">
+			<div id="sidebar">
+				<ul class="sidebar_nav">
+					</ul>
+				<div class="sidebar_note message note"><p>Upgrade your Plan</p></div>
+			</div>
+			<div id="main">
+				<h3>Upgrade your Plan</h3>
+				<hr>
+				<div id="dialog" title="Customize Plan Request" style="display: none;">
+					<p><label>Customize Plan Message:</label><textarea rows="5" cols="32" name="message" id="cprmsg"></textarea></p>
+					<p style="text-align: right;">
+							<input type="button" onclick="cancel();" value="Cancel" class="btn_green">&nbsp;
+							<input type="button" onclick="sendContactusMessage();" value="Send Message" class="btn_green">
+					</p>
+				</div>
+				
+				
+				<div class="currentplan"><br>
+						Plan Name: <b> First 50 Exams Free</b><br>
+						
+						Daily Limit: <b> 10</b><br>
+						Monthly Limit: <b> 50</b><br>
+						Max allowed Exams: <b> 50</b><br>
+						
+						Remaining Exams: <b>50</b><br>
+						
+						Total Exams Given: <b>0</b>
+				</div>
+				<br>
+				<div class="paymentplan" style="background-color: lightcyan;">
+						<div class="col1"><b>P100</b></div>
+						<div class="col2"><b>100 Credits</b> <br> + <br> includes all features <br>(able to give 100 test across an year time)</div>
+						<div class="col3"><img src="./Upgrade your Plan_buy_files/payicon.png"> <br>
+						<b>  49.00 USD
+							
+							
+							
+							
+							
+							
+							
+							
+							
+						</b>
+						</div>
+				</div>
+				<br>
+				<div style="text-align:center;float:left;width:100%;"><br>
+					<br><br>
+					<div style="float: left;width: 35%;"><img src="./Upgrade your Plan_buy_files/lock.png"> Secure Payment Option: <br>
+						Your account will be upgraded instantly 
+					</div>
+					<div style="float: left;">
+					<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+							<input type="hidden" name="cmd" value="_s-xclick">
+							<input type="hidden" name="hosted_button_id" value="W68NPPNXML7NA">
+							<input type="hidden" name="on0" value="Package"><select name="os0" id="os0" disabled="">
+							 <option value="100 Exams">100 Exams $49.00 USD</option>
+							 <option value="200 Exams">200 Exams $99.00 USD</option>
+							 <option value="300 Exams">300 Exams $139.00 USD</option>
+							 <option value="400 Exams">400 Exams $199.00 USD</option>
+							 <option value="500 Exams">500 Exams $239.00 USD</option>
+							 <option value="1000 Exams">1000 Exams $499.00 USD</option>
+							 <option value="2000 Exams">2000 Exams $939.00 USD</option>
+							 <option value="5000 Exams">5000 Exams $2,339.00 USD</option>
+							 <option value="10000 Exams">10000 Exams $4,539.00 USD</option>
+							 <option value="25000 Exams">25000 Exams $9,999.00 USD</option>
+							</select>
+							<br><br><input type="image" src="./Upgrade your Plan_buy_files/btn_buynow_cc_171x47.png" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+							<img alt="" border="0" src="./Upgrade your Plan_buy_files/pixel.gif" width="1" height="1">
+						<input type="hidden" name="on1" value="Email">
+						<input type="hidden" name="os1" maxlength="200" readonly="readonly" value="jayarammasetti@gmail.com">
+						<input type="hidden" name="currency_code" value="USD">
+						<input type="hidden" name="on2" value="CompanyId">
+						<input type="hidden" name="os2" value="2648">
+					</form>
+					</div>
+				</div>
+				
+			
+			<div style="float: left;width:95%" class="message info"><p>If you have any questions regarding Kaldin, Please contact us. We will get back to you 7 days a week. </p>
+			<p>Mail us: sales@kaldin.com</p>
+			<p>Phone: +1 (303) 500-8025 (USA) </p>
+			<p>Skype: kaldin.support</p>
+			</div>
+			</div>
+		</div>
+	</div>
+<script>
+document.getElementById("os0").value = '100 Exams';
+jQuery(function($) {
+    $('form').bind('submit', function() {
+        $(this).find(':input').removeAttr('disabled');
+        $.ajax({
+        	  type: 'POST',
+        	  url: "buynowrequest.do?check",
+        	  data: "",
+        	  success: "",
+        	  async:false
+        	});
+    });
+});
+</script>	
+
+<!-- PAGE TIMING STATISTICS :  REQUEST TIMESTAMP | 2015-12-23_01.29.10 PROCESSING TIME | 1 ms  -->		
+
+</body></html>
